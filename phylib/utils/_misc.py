@@ -39,7 +39,7 @@ def _decode_qbytearray(data_b64):
     """Decode binary arrays with base64."""
     encoded = base64.b64decode(data_b64)
     try:
-        from PyQt5.QtCore import QByteArray
+        from PySide6.QtCore import QByteArray
         out = QByteArray.fromBase64(encoded)
     except ImportError:  # pragma: no cover
         pass

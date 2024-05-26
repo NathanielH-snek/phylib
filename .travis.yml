@@ -2,7 +2,7 @@ language: python
 dist: xenial
 sudo: false
 python:
-  - "3.7"
+  - "3.11"
 before_install:
   - pip install codecov
 install:
@@ -15,9 +15,9 @@ install:
   - conda info -a
   # Create the environment.
   - conda install pyyaml
-  - conda env create python=3.7
+  - conda env create python=3.11
   - source activate phylib
-  - conda install pyqt
+  - conda install PySide6
   # Dev requirements
   - pip install -r requirements.txt
   - pip install -r requirements-dev.txt
